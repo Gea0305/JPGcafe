@@ -47,13 +47,34 @@
 	</div>
 </header>
 <section>
- 
-	
-
-
+ <form id="form">
+<p > Bienvenido a la pagina de registro de JPGcafé </p>
+<br><br>
+ <p > Por favor, rellene por lo menos los campos obligatorios </p>
+ <br><br>
+  Nombre de usuario (obligatorio) <br><br> <input type="text" name="nombre" id="nom1" required> <br><br>
+  Contraseña (obligatorio) <br><br> <input type="password" name="contra" id="pas" maxlength="8" required> <br><br>
+  Correo electrónico <br><br> <input type="email" name="email" id="em" required placeholder="nombre@dominio.extension"> <br><br>
+  Confirmar correo <br><br> <input type="email" name="Confiramacionemail" id="confem"  required placeholder="nombre@dominio.extension">
+  <br><br>
+  <fieldset>
+       <legend >Seleccionar plan</legend>
+		
+<input type="radio" id="radionormal" name="pro" value="si" > Usuario normal
+<br><br>
+<input type="radio" id="radiopro" name="pro" value="no" > Usuario premium
+<br><br>
+       Nombre de estudio <input type="text" name="estudio" disabled maxlength="10" > 
+		<br><br>
+        Direccion <input type="text" name="casa" disabled maxlength="10" >
+		<br><br>
+		Telefono <input type="text" name="tlf" maxlength="10" disabled >
+		<br><br>
+  </fieldset>
+    <input type="checkbox" name="cond" value="1" required> He leido y acepto las condiciones de uso (obligatorio)
+	<input type="submit" value="Finalizar">
+</form>
 </section>
-<p>Ha t formulario aqui</p>
-
 
 <footer>
 	<div class="col-m-2">
@@ -78,17 +99,59 @@
 
 <script >
 	
+var ele_pro = document.getElementById("radiopro");
+ele_pro.addEventListener("click", function(){
 
+var ele_Form = document.getElementById("form");
+
+ele_Form.estudio.disabled = false;
+ele_Form.casa.disabled = false;
+ele_Form.tlf.disabled = false;
+ });  
+
+var ele_Normal = document.getElementById("radionormal");
+ele_Normal.addEventListener("click", function(){
+
+var ele_Form = document.getElementById("form");
+
+ele_Form.estudio.disabled = true;
+ele_Form.casa.disabled = true;
+ele_Form.tlf.disabled = true;
+
+}); 
+
+function emailcorrecto(){
+var emailID = document.getElementById("em");
+var emailconfID = document.getElementById("confem");
+ if (emailID.value == emailconfID.value){
+     return true;
+}
+else{
+alert("La confirmacion de email no coincide con el email");
+    return false; 
+		 }
+}
+
+//funcion que guarda una cookie
+function setCookie() {
+    var name = document.getElementById("nom1");//selecciona el nombre
+	var pass = document.getElementById("pas");//y la comtraseña
+	//si el usuario ya existe, se pide otro nombre????
+    document.cookie = name.value + "=" + pass.value  ; //lo junta y lo guarda en una cookie
+}
+
+var eleForm = document.getElementById("form");
+eleForm.addEventListener("submit", function(){
+if (emailcorrecto()){
+setCookie();//se guarda la cookie
+return true
+} else{
+return false;
+}
+
+ });  
 
 </script>
-
-
-
-
-
-
-
-
 
 </body>
 </html>
