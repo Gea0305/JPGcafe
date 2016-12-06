@@ -48,11 +48,12 @@
 </header>
 <section>
  
-	
-
+  Nombre de usuario  <br><br> <input type="text" name="nombre" id="nom1" required> <br><br>
+  Contraseña <br><br> <input type="password" name="contra" id="pas" maxlength="8" required> <br><br>
+ 
+ <button id="entra" > Entra</button>
 
 </section>
-<p>Ha t formulario aqui</p>
 
 
 <footer>
@@ -78,7 +79,35 @@
 
 <script >
 	
+ //Realizamos operacion de comprobacion de usuario, cuando se pulsa el boton entrar.
+  var ele_entrar = document.getElementById("entra");
+    ele_entrar.addEventListener("click", function(){
+    var username = document.getElementById("nom1");
+	var userpass = document.getElementById("pas");
+	var juntar= username + "=" + userpass;//juntamos para comparar
+	var buscacookie = document.cookie;//buscamos al usuario en las cookies
+    var encuentracookie = buscacookie.indexOf(" " + username + "=") +1;
+	if (encuentracookie == 0)//si no lo encuentra, tal vez sea el primer usuario
+  {
+  encuentracookie = buscacookie.indexOf(username + "=");
+  } if(encuentracookie == -1){//si no lo encuentra, solo puede ser que el usuario no existe
+  alert ("usuario no registrado, por favor, haga clik en registrarse para añadir usuario");
+  return false;
+  }
+   var fin = buscacookie.indexOf(";", encuentracookie);//buscamos el fin de la cookie
+   if (fin == -1){//si no encuentra el ; es que es el ultimo
+   fin= buscacookie.length;
+   }
+	var juntar2 = unescape(buscacookie.substring(encuentracookie,fin));//tomamos el substring de usuario=contraseña
+	if (juntar2 == juntar){//comparamos para ver si la contraseña es correcta. Si lo es, el usuario entra
 
+	alert ("bienvenido " + username);
+	
+	//cambiar a pagina de perfil
+	return true;
+	}//si no es correcta la contraseña, se muestra el mensaje
+	alert ("contraseña invalida");
+	return false;
 
 </script>
 
