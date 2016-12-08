@@ -11,6 +11,7 @@ header{
 	left: 0;
 	right: 0;
 	position: fixed;
+	z-index: 150;
 }
 a{
 	text-decoration: none;
@@ -154,8 +155,9 @@ footer > .col-m-2 > a > p{
 }
 .contenedor{
 text-align: center;
-margin-top: 40px;
-margin-bottom: 100px;
+position: relative;
+/*overflow:auto;*/
+height: 400px;
 
 }
 
@@ -193,7 +195,21 @@ div.information{
 
 }
 
-.titulo_foto{
+.titulo_foto1{
+  	float: left;
+  	position: relative; 
+	padding-left:10px;
+	margin-top: 2%;
+
+}
+.usuario_foto1{
+  	float: right;
+  	position: relative;
+	margin-top: 2%;
+	 padding-right: 10px;
+	 color: blue;
+}
+.titulo_foto2{
   	float: left;
   	position: relative; 
 	padding-left:10px;
@@ -202,7 +218,7 @@ div.information{
 	 
 
 }
-.usuario_foto{
+.usuario_foto2{
   	float: right;
   	position: relative;
 	margin-top: 2%;
@@ -215,3 +231,14 @@ img.imagen_fondo{
 	height: 100%;
 
 }
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+  
+
+
+
