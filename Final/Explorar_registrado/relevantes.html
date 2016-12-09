@@ -70,11 +70,11 @@
 			<img src="images/fondo2.jpeg" alt="Imagen fondo" class="imagen_fondo">
 	 	</div> 
    	 	<div class="information">
-			<p class="titulo_foto1">Phtograp name1</p>
+			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
 			<p class="usuario_foto1">UserName #1</p>
 		</div>
 		<div class="information">
-			<p class="titulo_foto2">Phtograp name2</p>
+			<p class="titulo_foto2">Phtograp name#2</p>
 			<p class="usuario_foto2">UserName #2</p>
    		</div>
 		<div class="information">
@@ -109,11 +109,11 @@
 			<img src="images/fondo2.jpeg" alt="Imagen fondo" class="imagen_fondo">
 	 	</div> 
    	 	<div class="information">
-			<p class="titulo_foto1">Phtograp name3</p>
+			<p class="titulo_foto1">Phtograp name#3</p>
 			<p class="usuario_foto1">UserName #3</p>
 		</div>
 		<div class="information">
-			<p class="titulo_foto2">Phtograp name4</p>
+			<p class="titulo_foto2">Phtograp name#4</p>
 			<p class="usuario_foto2">UserName #4</p>
    		</div>
 		<div class="information">
@@ -147,12 +147,12 @@
 			<img src="images/fondo2.jpeg" alt="Imagen fondo" class="imagen_fondo">
 	 	</div> 
    	 	<div class="information">
-			<p class="titulo_foto1">Phtograp name5</p>
+			<p class="titulo_foto1">Phtograp name#5</p>
 			<p class="usuario_foto1">UserName #5</p>
 		</div>
 		<div class="information">
-			<p class="titulo_foto2">Phtograp name</p>
-			<p class="usuario_foto2">UserName #1</p>
+			<p class="titulo_foto2">Phtograp name#6</p>
+			<p class="usuario_foto2">UserName #6</p>
    		</div>
 		<div class="information">
 			<div class="etiquetas">
@@ -340,6 +340,7 @@ for (var i = 0; i < eleImagen.length; i++ ){
 
  	var section = document.getElementById("mySection");
 
+
 	
     
 
@@ -378,7 +379,7 @@ for (var i = 0; i < eleImagen.length; i++ ){
   		div_informacion.style.left="200px";
 		div_informacion.style.top= offset + 410 +"px";
 
-		document.body.appendChild(div_informacion);
+		
 
 		var div_comentarios = document.createElement('div');
 		div_comentarios.style.backgroundColor="white";
@@ -390,28 +391,64 @@ for (var i = 0; i < eleImagen.length; i++ ){
   		div_comentarios.style.left="710px";
 		div_comentarios.style.top= offset +"px";
 
-		document.body.appendChild(div_comentarios);
+		
 
-		 padre= this.parentNode; //Obtengo el div class="foto"
-     	 padre=padre.parentNode;	//Obtengo el div class="contenedor"
-     	 var p_elements = padre.getElementsByTagName("p"); //Obtengo todos los p elements
+		padre= this.parentNode; //Obtengo el div class="foto"
+     	padre=padre.parentNode;	//Obtengo el div class="contenedor"
+     	
+     	
+     	
+     	var paragraphs = padre.getElementsByTagName("p");
 
      	 //Ahora tendria que ver si ha clicado en la primera foto o en la segunda
      	 if(this.getAttribute("alt")=="Icono" ){ //He clicado en la primera imagen
-     	 	var phtograp_name= p_elements.getElementsByClassName("titulo_foto1");
-     	 	var User_Name = p_elements.getElementsByClassName("usuario_foto1");
+     	 	
+     	 	var aux_photo= paragraphs[0].innerHTML
+     	 	var aux_nombre = paragraphs[1].innerHTML
      	 	
 
      	 }else{
-     	 	var phtograp_name= p_elements.getElementsByClassName("titulo_foto2");
-     	 	var User_Name = p_elements.getElementsByClassName("usuario_foto2");
+     	 	var aux_photo= paragraphs[2].innerHTML
+     	 	var aux_nombre = paragraphs[3].innerHTML
      	 }
-
-		var nombre_foto = document.createTextNode(phtograp_name.innerHTML); 
-		var nombre_usuario = document.createTextNode(User_Name.innerHTML); 
-	//document.getElementById("paragraph").innerHTML;
+     	 
 		
 
+		
+	
+		var nombre_foto_text_node = document.createTextNode(aux_photo);
+		var nombre_usuario_text_node = document.createTextNode(aux_nombre);
+		var fecha_text_node = document.createTextNode("26/11/2016");
+
+		var nombre_foto = document.createElement("p");
+		var nombre_usuario = document.createElement("p");
+		var fecha = document.createElement("p");
+
+		fecha.appendChild(fecha_text_node);
+		nombre_foto.appendChild(nombre_foto_text_node);
+		nombre_usuario.appendChild(nombre_usuario_text_node);
+
+		fecha.style.position="relative";
+		fecha.style.float="left";
+		fecha.style.marginLeft="10px";
+		fecha.style.fontSize="small";
+		fecha.style.marginTop="19px";
+
+		nombre_foto.style.position="relative";
+		nombre_foto.style.float="left";
+		nombre_foto.style.marginLeft="10px";
+
+		nombre_usuario.style.position="relative";
+		nombre_usuario.style.float="right";
+		nombre_usuario.style.marginRight="10px";
+		nombre_usuario.style.color="blue";
+
+
+		div_informacion.appendChild(nombre_foto);
+		div_informacion.appendChild(fecha);
+		div_informacion.appendChild(nombre_usuario);
+		document.body.appendChild(div_informacion);
+		document.body.appendChild(div_comentarios);
 
    });
 }
