@@ -8,3 +8,4 @@ Cosas pendientes:
 5: poner enlaces entre paginas (los menús, al hacer clic en un usuario que te lleve a "otro usuario", etc)
 6: explorar y otro perfil responsive
 7: unificar los css por pestaña (uno para explorar, uno para Mis_fotos, uno para Perfil, etc)
+8: en registrarse falta el simbolo de información en todos los campos, que al poner el ratón te muestre una explciación (title) y no comprueba que los dos correos introducidos sean el mismo
