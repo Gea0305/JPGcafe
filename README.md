@@ -7,3 +7,4 @@ Cosas pendientes:
 4: entra y registrate ponerle un css aceptable
 5: poner enlaces entre paginas (los menús, al hacer clic en un usuario que te lleve a "otro usuario", etc)
 6: explorar y otro perfil responsive
+7: unificar los css por pestaña (uno para explorar, uno para Mis_fotos, uno para Perfil, etc)
