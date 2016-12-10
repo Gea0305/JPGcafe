@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JPGcafé</title>
+	<meta name="keywords" content="red social, fotos">
+	<meta name="description" content="Red social de fotografía">
+	<meta name="author" content="Gonzalo Lencina, Alejandro Blanco, Alfonso Martinez, Jorge Navarro">
+	<meta http-equiv="Content-Language" content="es-ES">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+	<div class="col-m-4 menu1 logo">
+		<h1>JPGcafé</h1>
+	</div>
+	<div class="col-m-6 menu1 menu">
+		<div class="col-m-12 menu1-1">
+			<p>Un lugar donde charlar, admirar y compartir fotos</p>
+		</div>
+		<div class="col-m-12 menu1-2">
+			<a href="#Explorar"><div class="col-m-5 menu1-2">
+				<p>Explorar</p>
+			</div></a>
+			<a href="#MisFotos"><div class="col-m-5 menu1-2-active">
+				<p>Mis Fotos</p>
+			</div></a>
+			<a href="#Perfil"><div class="col-m-5 menu1-2">
+				<p>Perfil</p>
+			</div></a>
+		</div>
+	</div>
+	<div class="col-m-4 menu1">
+		<div class="busqueda">
+			<p>Buscar...</p>
+		</div>
+	</div>
+	<div class="col-m-12">
+		<div class="menu2">
+			<a href="#VerTodas"><div class="col-m-3 menu2-2">
+				<p>Ver todas</p>
+			</div></a>
+			<a href="#SubirFotos"><div class="col-m-3 menu2-2">
+				<p>Subir fotos</p>
+			</div></a>
+			<a href="#Comentadas"><div class="col-m-3 menu2-2">
+				<p>Comentadas</p>
+			</div></a>
+			<a href="#Favoritas"><div class="col-m-3 menu2-2">
+				<p>Favoritas</p>
+			</div></a>
+			<a href="#Compartidas"><div class="col-m-3 menu2-2-active">
+				<p>Compartidas</p>
+			</div></a>
+		</div>
+	</div>
+</header>
+<section class="col-m-12" id="mySection">
+	<div class="menuIzq">
+		<p>Tamaño:</p>
+		<div class="sliderBar">
+			<input type="range" min="0" max="50" value="25" />
+		</div>
+		<p>Ordenar por:</p>
+		<div class="dropDown">
+			<select>
+				<option value="subida">Fecha de subida</option>
+				<option value="tomada">Fecha tomada</option>
+				<option value="tags">Categoría/tags</option>
+				<option value="numComentarios">Nº de comentarios</option>
+				<option value="numFavoritas">Nº de favoritos</option>
+				<option value="numCompartidas">Nº de compartidas</option>
+			</select>
+		</div>
+		<div>
+		<ul id="lista" >
+			<li><a href="#2016" class="años">2016</a>
+				<ul class="sublista">
+					<a href="#Octubre2016" class="mes"><li>Octubre</li></a>
+					<a href="#Junio2016" class="mes"><li>Junio</li></a>
+					<a href="#Mayo2016" class="mes"><li>Mayo</li></a>
+					<a href="#Abril2016" class="mes"><li>Abril</li></a>
+					<a href="#Marzo2016" class="mes"><li>Marzo</li></a>
+					<a href="#Febrero2016" class="mes"><li>Febrero</li></a>
+					<a href="#Enero2016" class="mes"><li>Enero</li></a>
+				</ul>
+			</li>
+			<li><a href="#2015" class="años">2015</a>
+				<ul class="sublista">
+					<a href="#Mayo2015" class="mes"><li>Mayo</li></a>
+					<a href="#Abril2015" class="mes"><li>Abril</li></a>
+					<a href="#Marzo2015" class="mes"><li>Marzo</li></a>
+					<a href="#Enero2015" class="mes"><li>Enero</li></a>
+				</ul>
+			</li>
+			<li><a href="#2014" class="años">2014</a>
+				<ul class="sublista">
+					<a href="#Junio2014" class="mes"><li>Junio</li></a>
+					<a href="#Mayo2014" class="mes"><li>Mayo</li></a>
+					<a href="#Abril2014" class="mes"><li>Abril</li></a>
+					<a href="#Marzo2014" class="mes"><li>Marzo</li></a>
+				</ul>
+			</li>
+			<li><a href="#2013" class="años">2013</a>
+				<ul class="sublista">
+					<a href="#Abril2013" class="mes"><li>Abril</li></a>
+					<a href="#Marzo2013" class="mes"><li>Marzo</li></a>
+				</ul>
+			</li>
+		</ul>
+		</div>
+	</div>
+	<div class="principal">
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+		<div class="celda">
+			<img class="img_contenido" src="images/fondo1.jpeg" alt="Imagen">
+			<div class="opciones">
+				<div class="menuCelda">
+					<div class="titulo">
+						<p>Nombre Foto</p>
+					</div>
+					<div class="iconos">
+					<a href="#Eliminar" title="Eliminar"><img class="papelera" src="images/delete1.png" alt="Eliminar"></a>
+					</div>
+				</div>
+				<div class="datos">
+				<p>16 comentarios 32 favoritos 64 compartidas</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="col-m-2">
+		<a href="#AcercaDe"><p>Acerca de</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Contacto"><p>Contacto</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Ayuda/FAQ"><p>Ayuda/FAQ</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Politicas"><p>Políticas</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Privacidad"><p>Privacidad</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Language"><p>Language</p></a>
+	</div>
+</footer>
+<script src="script/script.js"></script>
+</body>
+</html>
