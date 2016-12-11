@@ -11,3 +11,4 @@ Cosas pendientes:
 8: unificar los css por pestaña (uno para explorar, uno para Mis_fotos, uno para Perfil, etc)
 9: en registrarse falta el simbolo de información en todos los campos que al poner el ratón te muestre una explciación (title), no comprueba que los dos correos introducidos sean el mismo y no requiere que el usuario haya seleccionado plan (aunque mejor quitar directamente la selección del plan del registro)
 10: en perfil > info_perfil, los cambios en el nombre, contraseña, etc, deberían actualizarse en la cookie
+11: que en la barra de busqueda se pueda escribir
