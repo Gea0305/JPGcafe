@@ -11,6 +11,7 @@ header{
 	left: 0;
 	right: 0;
 	position: fixed;
+	z-index: 150;
 }
 a{
 	text-decoration: none;
@@ -50,7 +51,7 @@ footer > .col-m-2 > a > p{
 	height: 38px;
 	margin: 15px 8%;
 	font-size: 1.05em;
-	border-radius: 6px;
+	
 	color: rgb(200,200,200);
 	background-color: rgb(80,80,80);
 	border: 1px solid rgb(160,160,160);
@@ -135,27 +136,28 @@ footer > .col-m-2 > a > p{
 }
 
 .corazon{
-  height:60%;
-  width:60%;
+  height:100%;
+  width:100%;
  
 
 }
 .comentar{
-  height:60%;
-  width:60%;
+  height:100%;
+  width:100%;
  
 
 }
 .compartir{
-  height:60%;
-  width:60%;
+  height:100%;
+  width:100%;
  
 
 }
 .contenedor{
 text-align: center;
-margin-top: 40px;
-margin-bottom: 100px;
+position: relative;
+/*overflow:auto;*/
+height: 400px;
 
 }
 
@@ -166,7 +168,7 @@ div.fotos{
 	margin-top: 5%;
 	position: relative;
 	width: 30%;
-	height: 230px;
+	height: 65%;
 	box-shadow: 2px 2px 1px #888888;
 	        
 }
@@ -187,13 +189,27 @@ div.information{
 	float: right;
 	position: relative;
 	margin: 5px;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
    
 
 }
 
-.titulo_foto{
+.titulo_foto1{
+  	float: left;
+  	position: relative; 
+	padding-left:10px;
+	margin-top: 2%;
+
+}
+.usuario_foto1{
+  	float: right;
+  	position: relative;
+	margin-top: 2%;
+	 padding-right: 10px;
+	 color: blue;
+}
+.titulo_foto2{
   	float: left;
   	position: relative; 
 	padding-left:10px;
@@ -202,7 +218,7 @@ div.information{
 	 
 
 }
-.usuario_foto{
+.usuario_foto2{
   	float: right;
   	position: relative;
 	margin-top: 2%;
@@ -215,3 +231,31 @@ img.imagen_fondo{
 	height: 100%;
 
 }
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+.texto_comentarios_favoritos{
+	font-size: 70%;
+
+}
+.comentario_favoritos{
+	position: relative;
+	float: left;
+	width: 40%;
+	height: 100%;
+	overflow: hidden;
+}
+.conjunto_etiquetas{
+	position: relative;
+	float: right;
+	width: 55%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
