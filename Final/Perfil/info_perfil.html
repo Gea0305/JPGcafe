@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JPGcafé</title>
+	<meta name="keywords" content="red social, fotos">
+	<meta name="description" content="Red social de fotografía">
+	<meta name="author" content="Gonzalo Lencina, Alejandro Blanco, Alfonso Martinez, Jorge Navarro">
+	<meta http-equiv="Content-Language" content="es-ES">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+	<div class="col-m-4 menu1 logo">
+		<h1>JPGcafé</h1>
+	</div>
+	<div class="col-m-6 menu1 menu">
+		<div class="col-m-12 menu1-1">
+			<p>Un lugar donde charlar, admirar y compartir fotos</p>
+		</div>
+		<div class="col-m-12 menu1-2">
+			<a href="#Explorar"><div class="col-m-5 menu1-2">
+				<p>Explorar</p>
+			</div></a>
+			<a href="#MisFotos"><div class="col-m-5 menu1-2">
+				<p>Mis Fotos</p>
+			</div></a>
+			<a href="#Perfil"><div class="col-m-5 menu1-2-active">
+				<p>Perfil</p>
+			</div></a>
+		</div>
+	</div>
+	<div class="col-m-4 menu1">
+		<div class="busqueda">
+			<p>Buscar...</p>
+		</div>
+	</div>
+	<div class="col-m-12">
+		<div class="menu2">
+			<a href="#VerTodas"><div class="col-m-3 menu2-2">
+				<p>Mensajes</p>
+			</div></a>
+			<a href="#SubirFotos"><div class="col-m-3 menu2-2">
+				<p>Seguidos</p>
+			</div></a>
+			<a href="#Comentadas"><div class="col-m-3 menu2-2-active">
+				<p>Info Perfil</p>
+			</div></a>
+			<a href="#Favoritas"><div class="col-m-3 menu2-2">
+				<p>Opciones</p>
+			</div></a>
+			<div class="col-m-3 menu2-2">
+				<button type="button" class="btn btn-warning">Hazte PRO</button>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="col-m-12">
+	<div class="lineprimera">
+		<h2>Tu información de perfil:</h2>
+	</div>
+	<div class="line2">
+		<span>Puedes mirar o editar tu información de perfil</span>
+	</div>
+	<div class="line">
+		<span>Nombre de usuario: </span><span id="Nombre_usuario">Username</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="text" placeholder="Escribe tu nuevo nombre de usuario">
+	</div>
+	<div class="line">
+		<span>Correo: </span><span id="Correo">usermail@gmail.com</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="text" placeholder="Escribe tu nueva dirección de correo">
+	</div>
+	<div class="line">
+		<span>Cambiar contraseña (requiere las dos)</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="password" placeholder="Escribe tu antigua contraseña">
+	</div>
+	<div class="line2">
+		<input class="entrada" type="password" placeholder="Escribe la nueva contraseña">
+	</div>
+	<div class="line">
+		<span>Espacio utilizado: 20/500GB</span>
+	</div>
+	<div class="line2">
+		<div id="myBar">
+			<div id="myProgress"></div>
+		</div>
+	</div>
+	<div class="line">
+		<span>Nombre: </span><span id="Nombre">(no establecido)</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="text" placeholder="Escribe tu nombre">
+	</div>
+	<div class="line">
+		<span>Apellido: </span><span id="Apellido">(no establecido)</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="text" placeholder="Escribe tu apellido">
+	</div>
+	<div class="line">
+		<span>Facebook asociado: </span><span id="Facebook">(no establecido)</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="text" placeholder="Escribe tu cuenta de Facebook">
+	</div>
+	<div class="line">
+		<span>Twitter asociado: </span><span id="Twitter">(no establecido)</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="text" placeholder="Escribe tu cuenta de Twitter">
+	</div>
+	<div class="line">
+		<span>Google+ asociado: </span><span id="G_plus">(no establecido)</span>
+	</div>
+	<div class="line2">
+		<input class="entrada" type="text" placeholder="Escribe tu cuenta de Google+">
+	</div>
+	<div class="line">
+		<span>Imagen de perfil: </span><span id="Imagen_perfil">(no establecida)</span>
+	</div>
+	<div class="line2">
+		<button type="button" class="btn btn-default">Pincha aquí para buscar una foto</button>
+	</div>
+	<div class="line">
+		<span>Imagen de fondo de perfil: </span><span id="Imagen_fondo">(no establecida)</span>
+	</div>
+	<div class="line2">
+		<button type="button" class="btn btn-default">Pincha aquí para buscar una foto</button>
+	</div>
+	<div class="line">
+		<span>Edad: </span><span id="Edad">(no establecida)</span>
+	</div>
+	<div class="line2">
+		<input class="entrada numero" type="number" placeholder="Edad">
+	</div>
+	<div class="line">
+		<span>Tipo de usuario: </span><span id="Plan">normal</span>
+	</div>
+	<div class="line2">
+		<button type="button" class="btn btn-warning">Hazte PRO</button>
+	</div>
+	<div class="line oculto">
+		<span>Teléfono: </span><span id="Telefono">(no establecido)</span>
+	</div>
+	<div class="line2 oculto">
+		<input class="entrada numero" type="number" placeholder="Teléfono">
+	</div>
+	<div class="line oculto">
+		<span>Estudio: </span><span id="Estudio">(no establecido)</span>
+	</div>
+	<div class="line2 oculto">
+		<input class="entrada" type="text" placeholder="Escribe el nombre de tu estudio">
+	</div>
+	<div class="line oculto">
+		<span>Dirección de estudio: </span><span id="Direccion">(no establecida)</span>
+	</div>
+	<div class="line2 oculto">
+		<input class="entrada" type="text" placeholder="Escribe la dirección de tu estudio">
+	</div>
+	<div class="lineultima">
+		<button type="button" class="btn btn-primary"> Aceptar cambios </button>
+	</div>
+</section>
+<footer>
+	<div class="col-m-2">
+		<a href="#AcercaDe"><p>Acerca de</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Contacto"><p>Contacto</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Ayuda/FAQ"><p>Ayuda/FAQ</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Politicas"><p>Políticas</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Privacidad"><p>Privacidad</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Language"><p>Language</p></a>
+	</div>
+</footer>
+</body>
+</html>

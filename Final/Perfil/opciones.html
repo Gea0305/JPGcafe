@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JPGcafé</title>
+	<meta name="keywords" content="red social, fotos">
+	<meta name="description" content="Red social de fotografía">
+	<meta name="author" content="Gonzalo Lencina, Alejandro Blanco, Alfonso Martinez, Jorge Navarro">
+	<meta http-equiv="Content-Language" content="es-ES">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+	<div class="col-m-4 menu1 logo">
+		<h1>JPGcafé</h1>
+	</div>
+	<div class="col-m-6 menu1 menu">
+		<div class="col-m-12 menu1-1">
+			<p>Un lugar donde charlar, admirar y compartir fotos</p>
+		</div>
+		<div class="col-m-12 menu1-2">
+			<a href="#Explorar"><div class="col-m-5 menu1-2">
+				<p>Explorar</p>
+			</div></a>
+			<a href="#MisFotos"><div class="col-m-5 menu1-2">
+				<p>Mis Fotos</p>
+			</div></a>
+			<a href="#Perfil"><div class="col-m-5 menu1-2-active">
+				<p>Perfil</p>
+			</div></a>
+		</div>
+	</div>
+	<div class="col-m-4 menu1">
+		<div class="busqueda">
+			<p>Buscar...</p>
+		</div>
+	</div>
+	<div class="col-m-12">
+		<div class="menu2">
+			<a href="#VerTodas"><div class="col-m-3 menu2-2">
+				<p>Mensajes</p>
+			</div></a>
+			<a href="#SubirFotos"><div class="col-m-3 menu2-2">
+				<p>Seguidos</p>
+			</div></a>
+			<a href="#Comentadas"><div class="col-m-3 menu2-2">
+				<p>Info Perfil</p>
+			</div></a>
+			<a href="#Favoritas"><div class="col-m-3 menu2-2-active">
+				<p>Opciones</p>
+			</div></a>
+			<div class="col-m-3 menu2-2">
+				<button type="button" class="btn btn-warning">Hazte PRO</button>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="col-m-12">
+	<div class="lineprimera">
+		<h2>Tus opciones de la cuenta:</h2>
+	</div>
+	<div class="line2">
+		<span>Elige tus preferencias de seguridad, permisos y accesibilidad</span>
+	</div>
+	<div class="line">
+		<span>Quienes pueden descargar tus fotos:</span>
+	</div>
+	<div class="line2">
+		 <input type="radio" name="descargas" value="todos" checked>Todos 
+		 <input type="radio" name="descargas" value="amigos">Amigos 
+		 <input type="radio" name="descargas" value="nadie">Nadie 
+	</div>
+	<div class="line">
+		<span>Qué información aparecerá en tu perfil:</span>
+	</div>
+	<div class="line2">
+		 <input type="checkbox" name="información" value="nombre" checked>Nombre 
+		 <input type="checkbox" name="información" value="apellido" checked>Apellido 
+		 <input type="checkbox" name="información" value="correo" checked>Correo 
+		 <input type="checkbox" name="información" value="edad" checked>Edad 
+		 <input type="checkbox" name="información" value="estudio" disabled>Estudio 
+		 <input type="checkbox" name="información" value="direccon" disabled>Dirección 
+		 <input type="checkbox" name="información" value="telefono" disabled>Teléfono 
+	</div>
+	<div class="line">
+		<span>¿Cuando quieres recibir correos? </span>
+	</div>
+	<div class="line2">
+		<input type="checkbox" name="correo" value="mensaje" checked>Cuando reciba un mensaje
+	</div>
+	<div class="line2">
+		<input type="checkbox" name="correo" value="conecten" checked>Cuando se conecten con mi cuenta
+	</div>
+	<div class="line2">
+		<input type="checkbox" name="correo" value="novedades" checked>Cuando haya novedades en mi actividad
+	</div>
+	<div class="line pc">
+		<span>Puedes configurar accesos directos de teclado:</span>
+	</div>
+	<div class="line2 pc">
+		<input class="entrada numero" type="text" max="1" placeholder="Una tecla">
+		<span> para ir a explorar.</span>
+	</div>
+	<div class="line2 pc">
+		<input class="entrada numero" type="text" max="1" placeholder="Una tecla">
+		<span> para ir a tus fotos.</span>
+	</div>
+	<div class="line2 pc">
+		<input class="entrada numero" type="text" max="1" placeholder="Una tecla">
+		<span> para ir a tu perfil.</span>
+	</div>
+	<div class="line">
+		<label class="switch">
+			<input type="checkbox" checked>
+			<div class="slider"></div>
+		</label>
+		<span> Salir en los resultados de Google</span>
+	</div>
+	<div class="line">
+		<label class="switch">
+			<input type="checkbox" checked>
+			<div class="slider"></div>
+		</label>
+		<span> Activar text-to-speech (lectura)</span>
+	</div>
+	<div class="line">
+		<label class="switch">
+			<input type="checkbox" checked>
+			<div class="slider"></div>
+		</label>
+		<span> Activar reconocimiento de voz</span>
+	</div>
+	<div class="lineultima">
+		<button type="button" class="btn btn-primary"> Aceptar cambios </button>
+	</div>
+</section>
+<footer>
+	<div class="col-m-2">
+		<a href="#AcercaDe"><p>Acerca de</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Contacto"><p>Contacto</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Ayuda/FAQ"><p>Ayuda/FAQ</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Politicas"><p>Políticas</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Privacidad"><p>Privacidad</p></a>
+	</div>
+	<div class="col-m-2">
+		<a href="#Language"><p>Language</p></a>
+	</div>
+</footer>
+</body>
+</html>
