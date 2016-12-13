@@ -1,7 +1,6 @@
 # JPGcafe
 
 Cosas pendientes:
-1: el menú para no registrados debería mostrar "registrate" y "entra"
 2: hacer una X para salir de las fotos en Mis_fotos también
 3: la foto que aparece al aumentar, que lo haga donde esté la pantalla, centrada (no medio metro mas abajo ni arriba)
 4: poner enlaces entre paginas (los menús, al hacer clic en un usuario que te lleve a "otro usuario", etc)
