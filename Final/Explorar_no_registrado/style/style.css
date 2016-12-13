@@ -3,29 +3,28 @@ html{
 	font-family: Verdana, sans-serif;
 	background-color: rgb(235,235,235);
 }
+a{
+	text-decoration: none;
+}
 body{
-	margin: 110px 0 35px 0;
+	margin: 0;
 }
 header{
 	top: 0;
 	left: 0;
 	right: 0;
-	position: fixed;
-	z-index: 150;
-}
-a{
-	text-decoration: none;
+	z-index: 10;
 }
 footer{
 	left: 0;
 	right: 0;
-	bottom: 0;
-	height: 35px;
-	opacity: 0.9;
-	position: fixed;
-	font-size: 0.9em;
+	height: 25px;
+	font-size: 0.8em;
 	text-align: center;
-	background-color: rgb(0,0,0);
+}
+footer > .col-m-2{
+	opacity: 0.9;
+	background-color: rgb(0,0,0);	
 }
 footer > .col-m-2 > a > p{
 	margin: 9px 0;
@@ -34,7 +33,7 @@ footer > .col-m-2 > a > p{
 
 /*Menús*/
 .menu1{
-	height: 70px;
+	height: 50px;
 	background-color: rgb(30,30,30);
 }
 .logo{
@@ -45,31 +44,35 @@ footer > .col-m-2 > a > p{
 	font-family: Lucida Sans Unicode, sans-serif;
 }
 .logo > h1{
-	margin: 5px 0;
+	margin: 0;
 }
 .busqueda{
-	height: 38px;
-	margin: 15px 8%;
+	width: 90%;
+	height: 28px;
 	font-size: 1.05em;
-	
+	border-radius: 6px;
+	padding-left: 10px;
+	margin: 10px 0 0 3%;
 	color: rgb(200,200,200);
 	background-color: rgb(80,80,80);
 	border: 1px solid rgb(160,160,160);
 }
-.busqueda > p{
-	margin: 9px;
+.menu{
+	height: 110px;
 }
 .menu1-1{
-	height: 30px;
-	font-size: 0.75em;
+	height: 20px;
+	text-align: center;
+	font-size: 0.65em;
 	font-style: oblique;
 	color: rgb(140,140,140);
 }
 .menu1-1 > p{
-	margin: 7px 0;
+	margin: 0;
 }
 .menu1-2, .menu1-2-active, .menu2, .menu2-2, .menu2-2-active{
-	height: 40px;
+	height: 30px;
+	font-size: 0.95em;
 	font-weight: bold;
 	text-align: center;
 	color: rgb(250,250,250);
@@ -80,10 +83,95 @@ footer > .col-m-2 > a > p{
 	background-color: rgb(160,160,160);
 }
 .menu2, .menu2-2{
-	background-color: rgb(160,160,160);
+	background-color: rgb(80,80,80);
 }
 .menu1-2 > p, .menu1-2-active > p, .menu2-2 > p, .menu2-2-active > p{
-	margin: 10px 0;
+	margin: 5px 0;
+}
+
+/*Ver_todas*/
+.contenedor{
+	position: relative;
+	width: 100%;
+}
+.fotos{
+	width: 90%;
+	display: inline-block;
+	position: relative;
+	margin: 40px 5% 0 5%;
+}
+.imagen_fondo{
+	width: 100%;
+	height: 100%;
+	box-shadow: 2px 2px 5px grey;
+}
+.information{
+	width: 90%;
+	height: 35px;
+	display: inline-block;
+	position: relative;
+	margin: 5px 5% 0 5%;
+	background-color: white;
+	box-shadow: 2px 2px 5px grey;
+}
+.titulo_foto1, .titulo_foto2{
+  	float: left;
+  	position: relative; 
+	padding-left:10px;
+	margin-top: 9px;
+}
+.usuario_foto1, .usuario_foto2{
+  	float: right;
+  	position: relative;
+	margin-top: 9px;
+	padding-right: 10px;
+	color: blue;
+}
+.texto_comentarios_favoritos{
+	margin-top: 12px;
+	font-size: 0.67em;
+}
+.comentario_favoritos{
+	position: relative;
+	float: left;
+	width: 55%;
+	height: 100%;
+	overflow: hidden;
+	padding-left: 10px;
+}
+.conjunto_etiquetas{
+	position: relative;
+	float: right;
+	width: 40%;
+	height: 100%;
+	overflow: hidden;
+}
+.etiquetas{
+	float: right;
+	position: relative;
+	margin: 6px 8px 0 0;
+    width: 23px;
+    height: 23px;
+}
+.corazon, .comentar, .compartir{
+	height:100%;
+	width:100%;
+}
+.blur{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+.oculta1{
+	display: none;
+}
+.oculta2{
+	display: inline-block;
+}
+section{
+	margin-bottom: 40px;
 }
 
 /*Columnas*/
@@ -107,14 +195,173 @@ footer > .col-m-2 > a > p{
 	.col-m-10 {width: 83.33333333%;}
 	.col-m-11 {width: 91.66666667%;}
 	.col-m-12 {width: 100%;}
-	.menu1-2{
-		overflow: hidden;
-		border-radius: 5px 5px 0 0;
-	}
-	.menu2-2-active{
-		height: 37px;
-		border-bottom: 3px solid rgb(40,80,250);
-	}
+header{
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	position: fixed;
+}
+section{
+	margin: 110px 0 75px 0;
+}
+footer{
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	height: 35px;
+	position: fixed;
+	font-size: 0.9em;
+	text-align: center;
+}
+/*Menús*/
+.menu1{
+	height: 70px;
+	background-color: rgb(30,30,30);
+}
+.logo{
+	font-size: 1.2em;
+	text-align: center;
+	font-style: oblique;
+	color: rgb(250,250,250);
+	font-family: Lucida Sans Unicode, sans-serif;
+}
+.logo > h1{
+	margin: 5px 0;
+}
+.busqueda{
+	width: 80%;
+	height: 38px;
+	margin: 15px 0 0 7%;
+	font-size: 1.05em;
+	border-radius: 6px;
+	padding-left: 10px;
+	color: rgb(200,200,200);
+	background-color: rgb(80,80,80);
+	border: 1px solid rgb(160,160,160);
+}
+.menu{
+	height: 70px;
+}
+.menu1-1{
+	height: 30px;
+	text-align: left;
+	font-size: 0.74em;
+	font-style: oblique;
+	color: rgb(140,140,140);
+}
+.menu1-1 > p{
+	margin: 7px 0;
+}
+.menu1-2, .menu1-2-active, .menu2, .menu2-2, .menu2-2-active{
+	height: 40px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	color: rgb(250,250,250);
+	background-color: rgb(80,80,80);
+}
+.menu1-2{
+	overflow: hidden;
+	border-radius: 5px 5px 0 0;
+}
+.menu1-2-active, .menu2-2-active{
+	color: rgb(30,30,30);
+	background-color: rgb(160,160,160);
+}
+.menu2-2-active{
+	height: 37px;
+	border-bottom: 3px solid rgb(40,80,250);
+}
+.menu2, .menu2-2{
+	background-color: rgb(160,160,160);
+}
+.menu1-2 > p, .menu1-2-active > p, .menu2-2 > p, .menu2-2-active > p{
+	margin: 10px 0;
+}
+/*Ver_todas*/
+.contenedor{
+	font-size: 0.8em;
+	position: relative;
+	width: 100%;
+}
+.fotos{
+	width: 40%;
+	float: left;
+	position: relative;
+	margin: 40px 0 0 7%;
+}
+.imagen_fondo{
+	width: 100%;
+	height: 100%;
+	box-shadow: 2px 2px 5px grey;
+}
+.information{
+	width: 40%;
+	float: left;
+	height: 35px;
+	position: relative;
+	margin: 5px 0 0 7%;
+	background-color: white;
+	box-shadow: 2px 2px 5px grey;
+}
+.titulo_foto1, .titulo_foto2{
+  	float: left;
+  	position: relative; 
+	padding-left:10px;
+	margin-top: 9px;
+}
+.usuario_foto1, .usuario_foto2{
+  	float: right;
+  	position: relative;
+	margin-top: 9px;
+	padding-right: 10px;
+	color: blue;
+}
+.texto_comentarios_favoritos{
+	margin-top: 12px;
+	font-size: 0.67em;
+}
+.comentario_favoritos{
+	position: relative;
+	float: left;
+	width: 55%;
+	height: 100%;
+	overflow: hidden;
+	padding-left: 10px;
+}
+.conjunto_etiquetas{
+	position: relative;
+	float: right;
+	width: 40%;
+	height: 100%;
+	overflow: hidden;
+}
+.etiquetas{
+	float: right;
+	position: relative;
+	margin: 6px 8px 0 0;
+    width: 23px;
+    height: 23px;
+}
+.corazon, .comentar, .compartir{
+	height:100%;
+	width:100%;
+}
+.blur{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+.oculta1{
+	display: inline-block;
+}
+.oculta2{
+	display: none;
+}
 }
 /*Para PCs*/
 @media only screen and (min-width: 768px) {
@@ -130,220 +377,26 @@ footer > .col-m-2 > a > p{
 	.col-10 {width: 83.33333333%;}
 	.col-11 {width: 91.66666667%;}
 	.col-12 {width: 100%;}
-	.menu2{
-		padding: 0 6%;
-	}
-}
-
-
-.corazon{
-  height:100%;
-  width:100%;
- 
-
-}
-.comentar{
-  height:100%;
-  width:100%;
- 
-
-}
-.compartir{
-  height:100%;
-  width:100%;
- 
-
-}
-.contenedor{
-text-align: center;
-position: relative;
-/*overflow:auto;*/
-height: 400px;
-
-}
-
-div.fotos{
-	margin-left: 11%; 
-	background-color: white;
-	float: left;
-	margin-top: 5%;
-	position: relative;
-	width: 30%;
-	height: 65%;
-	box-shadow: 2px 2px 1px #888888;
-	        
-}
-div.information{
-	margin-left: 11%; 
-	background-color: white;
-	float: left;
-	margin-top: 5px;
-	position: relative;
-	width: 30%;
-	height: 35px;
-	box-shadow: 2px 2px 1px #888888;
-	     
-}
-
-
- div.etiquetas{
-	float: right;
-	position: relative;
-	margin: 5px;
-    width: 25px;
-    height: 25px;
-   
-
-}
-
-.titulo_foto1{
-  	float: left;
-  	position: relative; 
-	padding-left:10px;
-	margin-top: 2%;
-
-}
-.usuario_foto1{
-  	float: right;
-  	position: relative;
-	margin-top: 2%;
-	 padding-right: 10px;
-	 color: blue;
-}
-.titulo_foto2{
-  	float: left;
-  	position: relative; 
-	padding-left:10px;
-	margin-top: 2%;
-
-	 
-
-}
-.usuario_foto2{
-  	float: right;
-  	position: relative;
-	margin-top: 2%;
-	 padding-right: 10px;
-	 color: blue;
-}
-img.imagen_fondo{
-	
-	width: 100%;
-	height: 100%;
-
-}
-.blur   {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-}
-.texto_comentarios_favoritos{
-	font-size: 70%;
-
-}
-.comentario_favoritos{
-	position: relative;
-	float: left;
-	width: 60%;
-	height: 100%;
-	overflow: hidden;
-}
-.conjunto_etiquetas{
-	position: relative;
-	float: right;
-	width: 35%;
-	height: 100%;
-	overflow: hidden;
-}
-
-
-
-
-
-.conjunto_etiquetas_otro_perfil{
-	position: relative;
-	float: right;
-	width: 40%;
-	height: 100%;
-	overflow: hidden;
-}
-.comentario_favoritos_otro_perfil{
-	position: relative;
-	float: left;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-
-.fotos_otro_perfil{
-	margin-left: 8%;
-	background-color: white;
-	float: left;
-	margin-top: 5%;
-	position: relative;
-	width: 23%;
-	height: 200px;
-	box-shadow: 2px 2px 1px #888888;
-
-}
-.information_otro_perfil{
-	margin-left: 8%; 
-	background-color: white;
-	float: left;
-	margin-top: 5px;
-	position: relative;
-	width: 23%;
-	height: 36px;
-	box-shadow: 2px 2px 1px #888888;
-
-
-}
-.opciones_horizontales{
-	width: 100%;
-	height: 90px;
-
-}
-.ordenar_otro_perfil{
-	position: relative;
-	float: left;
-	margin-left: 8%;
-
-}
-.tamaño_otro_perfil{
-	position: relative;
-	float: left;
-	margin-left: 30px;
-
-
-}
-
 /*Menús*/
 .menu2{
 	padding: 0 6%;
 }
-/*Info_perfil y Opciones*/
-.line, .line2, .lineprimera, .lineultima{
-	width: auto;
-	margin-left: 60px;
+/*Ver_todas*/
+.contenedor{
+	font-size: 1em;
 }
-.lineprimera{
-	margin-top: 30px;
+.titulo_foto1, .titulo_foto2, .usuario_foto1, .usuario_foto2{
+	padding-left:10px;
+	margin-top: 9px;
 }
-.lineultima{
-	margin-bottom: 30px;
+.texto_comentarios_favoritos{
+	margin-top: 11px;
+	font-size: 0.75em;
 }
-.entrada{
-	width: 320px;
+.comentario_favoritos{
+	width: 60%;
 }
-.numero{
-	width: 70px;
-}
-.pc{
-	display: block;
-}
-#myBar {
-  width: 340px;
+.conjunto_etiquetas{
+	width: 35%;
 }
 }
