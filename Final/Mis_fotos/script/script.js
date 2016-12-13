@@ -22,15 +22,35 @@ var section = document.getElementById("mySection");
 	for(var i=0; i<lapices.length; i++){
 		lapices[i].addEventListener("click", function(){
 			
+			var imagen_apliada_comprobacion = document.getElementsByClassName("divImagen");
+			if(!imagen_apliada_comprobacion || 0 === imagen_apliada_comprobacion.length ){  
+
+
 			var divImagen=document.createElement("div");
 			var imagenSel=this.parentNode.parentNode.parentNode.parentNode.parentNode.children[0];
 			divImagen.style.position="absolute";
-			divImagen.style.width="70%";
+			divImagen.style.width="50%";
 			divImagen.style.height="400px";
 			divImagen.setAttribute('class', 'divImagen')
 			var offset=this.getBoundingClientRect().top + window.scrollY;
 			divImagen.style.left="15%";
-			divImagen.style.top=offset+"px";
+			divImagen.style.top=offset+ -120 +"px";
+
+			var imagen_x = document.createElement("img");
+			imagen_x.style.position="absolute";
+			imagen_x.style.width="30px";
+			imagen_x.style.height="30px";
+			imagen_x.style.zIndex="100";
+			imagen_x.style.left="66%";
+			imagen_x.style.top= offset + -120 + "px";
+			imagen_x.src= "images/x.png";
+			imagen_x.addEventListener("click", function(){
+				var elemento=imagen.parentNode.parentNode;
+				elemento.removeChild(elemento.lastChild);
+				elemento.removeChild(elemento.lastChild);
+				section.removeAttribute("class");
+			});
+			document.body.appendChild(imagen_x);
 	
 			var imagen = document.createElement("img");
 			imagen.alt="Imagen seleccionada";
@@ -119,13 +139,7 @@ var section = document.getElementById("mySection");
 			iconoBrillo.style.marginTop="10px";
 			iconoBrilloRef.appendChild(iconoBrillo);
 			
-			imagen.addEventListener("click", function(){
-				var elemento=imagen.parentNode.parentNode;
-				
-				elemento.removeChild(elemento.lastChild);
-				
-				section.removeAttribute("class");
-			});
+			
 		
 		});
 	}
