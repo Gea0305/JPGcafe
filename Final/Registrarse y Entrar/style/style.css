@@ -141,6 +141,15 @@ footer > .col-m-2 > a > p{
 .oculto, .pc{
 	display: none;
 }
+.imagen_informacion{
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+}
+.mayus{
+	font-size: 1.2em;
+	font-weight: bold;
+}
 #myBar {
   position: relative;
   width: 272px;
