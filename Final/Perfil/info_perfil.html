@@ -32,20 +32,22 @@
 		</div>
 	</div>
 	<div class="col-m-4 menu1">
-		<input class="busqueda" type="text" name="busqueda" placeholder="Buscar...">
+		<div class="busqueda">
+			<p>Buscar...</p>
+		</div>
 	</div>
 	<div class="col-m-12">
 		<div class="menu2">
-			<a href="#Mensajes"><div class="col-m-3 menu2-2">
+			<a href="#VerTodas"><div class="col-m-3 menu2-2">
 				<p>Mensajes</p>
 			</div></a>
-			<a href="#Seguidos"><div class="col-m-3 menu2-2">
+			<a href="#SubirFotos"><div class="col-m-3 menu2-2">
 				<p>Seguidos</p>
 			</div></a>
-			<a href="#Info_perfil"><div class="col-m-3 menu2-2-active">
+			<a href="#Comentadas"><div class="col-m-3 menu2-2-active">
 				<p>Info Perfil</p>
 			</div></a>
-			<a href="#Opciones"><div class="col-m-3 menu2-2">
+			<a href="#Favoritas"><div class="col-m-3 menu2-2">
 				<p>Opciones</p>
 			</div></a>
 			<div class="col-m-3 menu2-2">
@@ -186,5 +188,88 @@
 		<a href="#Language"><p>Language</p></a>
 	</div>
 </footer>
+<script>
+
+function setCookie() {
+   	var username = document.getElementById("nom1");//selecciona el nombre
+if (username==""){username=//el nombre de usuario de arriba}
+else{document.cookie = username + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';//para borrar una cookie}
+	var pass1 = document.getElementById("pas");//y la contraseña
+	var pass2= document.getElementById("pas");//la nueva contraseña
+if(pass1!=""){//comprobar que es correcta y cambiar)}
+else{buscar en cookie la contraseña}
+	var correo = document.getElementById("nom1");//selecciona el nombre
+if (correo==""){correo=//el correo de arriba}
+	var name = document.getElementById("pas");//y la comtraseña
+	var surname= document.getElementById("pas");//la nueva contraseña
+	var facebook = document.getElementById("nom1");//selecciona el nombre
+	var twitter = document.getElementById("pas");//y la comtraseña
+	var gmail= document.getElementById("pas");//la nueva contraseña
+	var age= document.getElementById("pas");//la nueva contraseña
+	var pro= document.getElementById("pas");//la nueva contraseña
+//orden de la cookie: username=pass.correo.name.surname.facebook.twitter.gmail.age.pro.
+
+    document.cookie = username.value + "=" + pass.value + "." + correo.value + "." + name.value + "." + surname.value + "." + facebook.value + "." + twitter.value + "." + gmail.value + "." + age.value + "." + pro.value + "."; //lo junta y lo guarda en una cookie
+
+//Con esto colocamos los primeros valores en la parte de arriba.
+var eleForm = document.getElementById("form");
+eleForm.addEventListener("submit", function(){
+    var username = document.getElementById("nom1");
+	var userpass = document.getElementById("pas");
+	var juntar= username + "=" + userpass;//juntamos para comparar
+	var buscacookie = document.cookie;//buscamos al usuario en las cookies
+    var encuentracookie = buscacookie.indexOf(" " + username + "=") +1;
+	if (encuentracookie == 0)//si no lo encuentra, tal vez sea el primer usuario
+  {
+  encuentracookie = buscacookie.indexOf(username + "=");
+  } if(encuentracookie == -1){//si no lo encuentra, solo puede ser que el usuario no existe
+  alert ("usuario no registrado, por favor, haga clik en registrarse para añadir usuario");
+  return false;
+  }
+   var fin = buscacookie.indexOf(";", encuentracookie);//buscamos el fin de la cookie
+   if (fin == -1){//si no encuentra el ; es que es el ultimo
+   fin= buscacookie.length;
+   }//a continuacion meto en variables la informacion de la cookie
+   var equal= buscacookie.indexOf("=",encuentracookie);
+   if (userpass==unescape(buscacookie.substring(equal,fin))
+	var index=0;
+	var previndex=0;
+	var juntar2 = unescape(buscacookie.substring(encuentracookie,fin));
+	index= juntar2.indexOf(".", index);
+	var username= unescape(equal.substring(0,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);
+	var pass1 = unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);
+	var correo = unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);
+	var name = unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);
+	var surname= unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);	
+	var facebook = unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);	
+	var twitter = unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);	
+	var gmail= unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);
+	var age= unescape(equal.substring(previndex,index));
+	previndex=index;
+	index= juntar2.indexOf(".", index);	
+	var pro= unescape(equal.substring(previndex,index));
+	return false;
+ });  
+
+
+</script>
+
 </body>
 </html>
+
