@@ -81,8 +81,9 @@
  //Realizamos operacion de comprobacion de usuario, cuando se pulsa el boton entrar.
 var eleForm = document.getElementById("form");
 eleForm.addEventListener("submit", function(){
-    var username = document.getElementById("nom1");
-	var userpass = document.getElementById("pas");
+    var username = document.getElementById("nom1").value;
+	var userpass1 = document.getElementById("pas").value;
+	var userpass = userpass1 + ".........";
 	var juntar= username + "=" + userpass;//juntamos para comparar
 	var buscacookie = document.cookie;//buscamos al usuario en las cookies
     var encuentracookie = buscacookie.indexOf(" " + username + "=") +1;
@@ -98,8 +99,10 @@ eleForm.addEventListener("submit", function(){
    fin= buscacookie.length;
    }
 	var juntar2 = unescape(buscacookie.substring(encuentracookie,fin));//tomamos el substring de usuario=contraseña
+
 	if (juntar2 == juntar){//comparamos para ver si la contraseña es correcta. Si lo es, el usuario entra
 	alert ("bienvenido " + username);
+	
 	//cambiar a pagina de perfil
 	return true;
 	}//si no es correcta la contraseña, se muestra el mensaje
