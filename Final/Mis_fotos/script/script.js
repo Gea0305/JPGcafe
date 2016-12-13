@@ -139,7 +139,7 @@ var section = document.getElementById("mySection");
 			iconoBrillo.style.marginTop="10px";
 			iconoBrilloRef.appendChild(iconoBrillo);
 			
-			
+			}
 		
 		});
 	}
