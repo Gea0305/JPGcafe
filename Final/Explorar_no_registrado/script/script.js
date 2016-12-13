@@ -84,63 +84,6 @@
     }
 
 
-//Realizamos operacion de comprobacion de usuario, cuando se pulsa el boton entrar.
-var eleForm = document.getElementById("form");
-eleForm.addEventListener("submit", function(){
-    var username = document.getElementById("nom1");
-  var userpass = document.getElementById("pas");
-  var juntar= username + "=" + userpass;//juntamos para comparar
-  var buscacookie = document.cookie;//buscamos al usuario en las cookies
-    var encuentracookie = buscacookie.indexOf(" " + username + "=") +1;
-  if (encuentracookie == 0)//si no lo encuentra, tal vez sea el primer usuario
-  {
-  encuentracookie = buscacookie.indexOf(username + "=");
-  } if(encuentracookie == -1){//si no lo encuentra, solo puede ser que el usuario no existe
-  alert ("usuario no registrado, por favor, haga clik en registrarse para añadir usuario");
-  return false;
-  }
-   var fin = buscacookie.indexOf(";", encuentracookie);//buscamos el fin de la cookie
-   if (fin == -1){//si no encuentra el ; es que es el ultimo
-   fin= buscacookie.length;
-   }
-  var juntar2 = unescape(buscacookie.substring(encuentracookie,fin));//tomamos el substring de usuario=contraseña
-  if (juntar2 == juntar){//comparamos para ver si la contraseña es correcta. Si lo es, el usuario entra
-  alert ("bienvenido " + username);
-  //cambiar a pagina de perfil
-  return true;
-  }//si no es correcta la contraseña, se muestra el mensaje
-  alert ("contraseña invalida");
-  return false;
- }); 
-
-
-function emailcorrecto(){
-var emailID = document.getElementById("em");
-var emailconfID = document.getElementById("confem");
- if (emailID.value == emailconfID.value){
-     return true;
-}
-else{
-alert("La confirmacion de email no coincide con el email");
-    return false; 
-     }
-}
-//funcion que guarda una cookie
-function setCookie() {
-    var name = document.getElementById("nom1");//selecciona el nombre
-  var pass = document.getElementById("pas");//y la comtraseña
-    document.cookie = name.value + "=" + pass.value  ; //lo junta y lo guarda en una cookie
-}
-var eleForm = document.getElementById("form");
-eleForm.addEventListener("submit", function(){
-  if (emailcorrecto()){
-  setCookie();//se guarda la cookie
-    //ir a la pagina de entrada para que se vea lo chulo que es la cookie
-  return true
-  } else{
-  return false;
-  }
-});  
 
 
 
