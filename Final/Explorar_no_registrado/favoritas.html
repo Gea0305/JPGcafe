@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
-
 	<title>JPGcafé</title>
 	<meta name="keywords" content="red social, fotos">
 	<meta name="description" content="Red social de fotografía">
@@ -18,26 +15,24 @@
 	<div class="col-m-4 menu1 logo">
 		<h1>JPGcafé</h1>
 	</div>
-	<div class="col-m-6 menu1">
+	<div class="col-m-6 menu1 menu">
 		<div class="col-m-12 menu1-1">
 			<p>Un lugar donde charlar, admirar y compartir fotos</p>
 		</div>
 		<div class="col-m-12 menu1-2">
-			<a href="relevantes.html"><div class="col-m-5 menu1-2-active">
+			<a href="#Explorar"><div class="col-m-5 menu1-2-active">
 				<p>Explorar</p>
 			</div></a>
-			<a href="registrarse.html"><div class="col-m-5 menu1-2">
+			<a href="#Registrarse"><div class="col-m-5 menu1-2">
 				<p>Registrarse</p>
 			</div></a>
-			<a href="entrar.html"><div class="col-m-5 menu1-2">
+			<a href="#Entrar"><div class="col-m-5 menu1-2">
 				<p>Entrar</p>
 			</div></a>
 		</div>
 	</div>
 	<div class="col-m-4 menu1">
-		<div class="busqueda">
-			<p>Buscar...</p>
-		</div>
+		<input class="busqueda" type="text" name="busqueda" placeholder="Buscar...">
 	</div>
 	<div class="col-m-12">
 		<div class="menu2">
@@ -59,36 +54,43 @@
 		</div>
 	</div>
 </header>
-<section id="mySection">
- 
+<section class="col-m-12" id="mySection">
 	<div class= "contenedor">
 		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Icono" class="imagen_fondo">
+			<img src="images/fondo3.jpg" alt="Icono" class="imagen_fondo">
 	 	</div> 
-		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Imagen fondo" class="imagen_fondo">
-	 	</div> 
-   	 	<div class="information">
+   	 	<div class="information oculta2">
 			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
-			<p class="usuario_foto1">UserName #1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
+		</div>
+		<div class="information oculta2">
+			<div class="comentario_favoritos">
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
+			</div>
+			<div class="conjunto_etiquetas">
+				<div class="etiquetas">
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
+				</div>
+			</div>
+		</div>
+		<div  class="fotos" >
+			<img src="images/fondo3.jpg" alt="Imagen fondo" class="imagen_fondo">
+	 	</div> 
+   	 	<div class="information oculta1">
+			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
 		</div>
 		<div class="information">
 			<p class="titulo_foto2">Phtograp name#2</p>
-			<p class="usuario_foto2">UserName #2</p>
+			<a href="#Otro_usuario"><p class="usuario_foto2">UserName#2</p></a>
    		</div>
-		<div class="information">
+		<div class="information oculta1">
 			<div class="comentario_favoritos">
-				<p class="texto_comentarios_favoritos">16 comentarios 32 favoritos</p>
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
@@ -98,46 +100,47 @@
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	<div class= "contenedor">
 		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Icono" class="imagen_fondo">
+			<img src="images/fondo3.jpg" alt="Icono" class="imagen_fondo">
 	 	</div> 
-		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Imagen fondo" class="imagen_fondo">
-	 	</div> 
-   	 	<div class="information">
+   	 	<div class="information oculta2">
 			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
-			<p class="usuario_foto1">UserName #1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
+		</div>
+		<div class="information oculta2">
+			<div class="comentario_favoritos">
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
+			</div>
+			<div class="conjunto_etiquetas">
+				<div class="etiquetas">
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
+				</div>
+			</div>
+		</div>
+		<div  class="fotos" >
+			<img src="images/fondo3.jpg" alt="Imagen fondo" class="imagen_fondo">
+	 	</div> 
+   	 	<div class="information oculta1">
+			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
 		</div>
 		<div class="information">
 			<p class="titulo_foto2">Phtograp name#2</p>
-			<p class="usuario_foto2">UserName #2</p>
+			<a href="#Otro_usuario"><p class="usuario_foto2">UserName#2</p></a>
    		</div>
-		<div class="information">
+		<div class="information oculta1">
 			<div class="comentario_favoritos">
-				<p class="texto_comentarios_favoritos">16 comentarios 32 favoritos</p>
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
@@ -147,46 +150,47 @@
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	<div class= "contenedor">
 		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Icono" class="imagen_fondo">
+			<img src="images/fondo3.jpg" alt="Icono" class="imagen_fondo">
 	 	</div> 
-		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Imagen fondo" class="imagen_fondo">
-	 	</div> 
-   	 	<div class="information">
+   	 	<div class="information oculta2">
 			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
-			<p class="usuario_foto1">UserName #1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
+		</div>
+		<div class="information oculta2">
+			<div class="comentario_favoritos">
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
+			</div>
+			<div class="conjunto_etiquetas">
+				<div class="etiquetas">
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
+				</div>
+			</div>
+		</div>
+		<div  class="fotos" >
+			<img src="images/fondo3.jpg" alt="Imagen fondo" class="imagen_fondo">
+	 	</div> 
+   	 	<div class="information oculta1">
+			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
 		</div>
 		<div class="information">
 			<p class="titulo_foto2">Phtograp name#2</p>
-			<p class="usuario_foto2">UserName #2</p>
+			<a href="#Otro_usuario"><p class="usuario_foto2">UserName#2</p></a>
    		</div>
-		<div class="information">
+		<div class="information oculta1">
 			<div class="comentario_favoritos">
-				<p class="texto_comentarios_favoritos">16 comentarios 32 favoritos</p>
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
@@ -196,46 +200,47 @@
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	<div class= "contenedor">
 		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Icono" class="imagen_fondo">
+			<img src="images/fondo3.jpg" alt="Icono" class="imagen_fondo">
 	 	</div> 
-		<div  class="fotos" >
-			<img src="images/fondo2.jpeg" alt="Imagen fondo" class="imagen_fondo">
-	 	</div> 
-   	 	<div class="information">
+   	 	<div class="information oculta2">
 			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
-			<p class="usuario_foto1">UserName #1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
+		</div>
+		<div class="information oculta2">
+			<div class="comentario_favoritos">
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
+			</div>
+			<div class="conjunto_etiquetas">
+				<div class="etiquetas">
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
+				</div>
+			</div>
+		</div>
+		<div  class="fotos" >
+			<img src="images/fondo3.jpg" alt="Imagen fondo" class="imagen_fondo">
+	 	</div> 
+   	 	<div class="information oculta1">
+			<p class="titulo_foto1" id="fotito">Phtograp name#1</p>
+			<a href="#Otro_usuario"><p class="usuario_foto1">UserName#1</p></a>
 		</div>
 		<div class="information">
 			<p class="titulo_foto2">Phtograp name#2</p>
-			<p class="usuario_foto2">UserName #2</p>
+			<a href="#Otro_usuario"><p class="usuario_foto2">UserName#2</p></a>
    		</div>
-		<div class="information">
+		<div class="information oculta1">
 			<div class="comentario_favoritos">
-				<p class="texto_comentarios_favoritos">16 comentarios 32 favoritos</p>
+				<p class="texto_comentarios_favoritos">32 comentarios 64 favoritos</p>
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
@@ -245,13 +250,7 @@
 			</div>
 			<div class="conjunto_etiquetas">
 				<div class="etiquetas">
-					<img    class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
-				</div>
-				<div class="etiquetas">
-	   	 		 	<img  class="corazon" alt="Dale like"  src="images/like.png" title="Dale like">
-				</div>
-				<div class="etiquetas">
-					<img  class="comentar" alt="Comentar" src="images/coment.png" title="Comentar" >
+					<img class="compartir" alt="Comparte este producto" src="images/share.png" title="Comparte este producto" >
 				</div>
 			</div>
 		</div>
