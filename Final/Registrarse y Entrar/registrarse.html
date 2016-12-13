@@ -118,13 +118,13 @@ alert("La confirmacion de email no coincide con el email");
 function setCookie() {
     var name = document.getElementById("nom1");//selecciona el nombre
 	var pass = document.getElementById("pas");//y la comtraseña
-    document.cookie = name.value + "=" + pass.value  ; //lo junta y lo guarda en una cookie
+    document.cookie = name.value + "=" + pass.value + "........."; //lo junta y lo guarda en una cookie
 }
 var eleForm = document.getElementById("form");
 eleForm.addEventListener("submit", function(){
 	if (emailcorrecto()){
 	setCookie();//se guarda la cookie
-		//ir a la pagina de entrada para que se vea lo chulo que es la cookie
+	window.open('entrar.html');//ir a la pagina de entrada para que se vea lo chulo que es la cookie
 	return true
 	} else{
 	return false;
