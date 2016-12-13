@@ -13,7 +13,7 @@
 <body>
 <header>
 	<div class="col-m-4 menu1 logo">
-		<img src="images/logo.PNG" alt="icono de la pagina" class="icono_pagina">
+		<h1>JPGcafé</h1>
 	</div>
 	<div class="col-m-6 menu1 menu">
 		<div class="col-m-12 menu1-1">
@@ -75,7 +75,7 @@
 		<input class="entrada" id="Correo_cambiar" type="text" placeholder="Escribe tu nueva dirección de correo">
 	</div>
 	<div class="line">
-		<span id="Contrasenia">Cambiar contraseña (requiere las dos)</span>
+		<span>Cambiar contraseña (requiere las dos)</span><span id="Contrasenia" display hidden>(no establecida)</span>
 	</div>
 	<div class="line2">
 		<input class="entrada" id="pass1" type="password" placeholder="Escribe tu antigua contraseña">
@@ -186,78 +186,76 @@
 
 function setCookie() {
    	var username = document.getElementById("usuario_cambiar");
-if (username==""){
-username=document.getElementById("Nombre_usuario");
+if (typeof (username)=="undefined"){
+username=document.getElementById("Nombre_usuario").value;
 }
 else{
-var usuarioeliminado= username=document.getElementById("Nombre_usuario");
+var usuarioeliminado= username=document.getElementById("Nombre_usuario").value;
 document.cookie = usuarioeliminado + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';//para borrar una cookie
 }
-	var Contrasenia = document.getElementById("Contrasenia");
-
-	var pass1 = document.getElementById("pass1");
-
-if(pass1!="" && pass1==Contrasenia){
-
-var pass2 = document.getElementById("pass2");
-
-}else{
-
-alert("contraseña incorrecta");
-
-return false
-
-}
-	var correo = document.getElementById("Correo_cambiar");
+alert(username.value);
+	var Contrasenia = document.getElementById("Contrasenia").value;
+alert(Contrasenia.value);
+	var pass1 = document.getElementById("pass1").value;
+var pass="";
+//if(pass1!=""){
+//if(pass1==Contrasenia){
+ //pass = document.getElementById("pass2");
+//}else{
+//alert("contraseña incorrecta");
+//return false;
+//}
+//}
+	var correo = document.getElementById("Correo_cambiar").value;
 if (correo==""){
 correo=document.getElementById("Correo");
 }
-	var name = document.getElementById("Nombre_cambiar");
+	var name = document.getElementById("Nombre_cambiar").value;
 if(name==""){
 name=document.getElementById("Nombre");
 }
-	var surname= document.getElementById("Apellido_cambiar");
+	var surname= document.getElementById("Apellido_cambiar").value;
 	if(surname==""){
 surname=document.getElementById("Apellido");
 }
-	var facebook = document.getElementById("Facebook_cambiar");
+	var facebook = document.getElementById("Facebook_cambiar").value;
 	if(facebook==""){
 facebook=document.getElementById("Facebook");
 }
-	var twitter = document.getElementById("Twitter_cambiar");
+	var twitter = document.getElementById("Twitter_cambiar").value;
 	if(twitter==""){
 twitter=document.getElementById("Twitter");
 }
-	var gplus= document.getElementById("Gplus_cambiar");
+	var gplus= document.getElementById("Gplus_cambiar").value;
 	if(gplus==""){
 gplus=document.getElementById("Gplus");
 }
-	var age= document.getElementById("Edad_cambiar");
+	var age= document.getElementById("Edad_cambiar").value;
 	if(age==""){
 age=document.getElementById("Edad");
 }
 	alert(document.cookie);
-	var pro= document.getElementById("Pro");
+	var pro= document.getElementById("Pro").value;
 	//if(pro=="pro")){name=document.getElementById("Nombre");}
+		alert("hola");
 	
 //orden de la cookie: username=pass.correo.name.surname.facebook.twitter.gmail.age.pro.
     document.cookie = username.value + "=" + pass.value + "." + correo.value + "." + name.value + "." + surname.value + "." + facebook.value + "." + twitter.value + "." + gmail.value + "." + age.value + "." + pro.value + "."; //lo junta y lo guarda en una cookie
 alert(document.cookie);
-
+return true;
 }
 
 
 
 var eleForm = document.getElementById("form");
 eleForm.addEventListener("submit", function(){
-	if (emailcorrecto()){
-	setCookie();//se guarda la cookie
+	if (setCookie()){
 	//window.open('entrar.html');//ir a la pagina de entrada para que se vea lo chulo que es la cookie
-	return true
+	return true;
 	} else{
 	return false;
 	}
-
+});  
 
 
 //Con esto colocamos los primeros valores en la parte de arriba.
@@ -302,7 +300,7 @@ buscacookie = document.cookie;//buscamos al usuario en las cookies
 	sustituir.innerHTML= username1;
 	index= juntar2.indexOf(".", index);
 	
-	var pass1 = unescape(juntar2.substring(equal,index));
+	var pass1 = unescape(juntar2.substring(equal + 1,index));
 	 sustituir = document.getElementById("Contrasenia");
 	sustituir.innerHTML= pass1;
 	previndex=index;
