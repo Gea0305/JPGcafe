@@ -357,6 +357,19 @@ footer > .col-m-2 > a > p{
 .oculto, .pc{
 	display: none;
 }
+
+/*Hazte_pro*/
+.cuadro{
+	width: 275px;
+	margin: auto;
+	padding: 20px 5px;
+	margin-top: 15px;
+	border-radius: 1px;
+	text-align: center;
+	background-color: #FFC96B;
+	border: 1px solid #EB9500;
+	box-shadow: 1px 1px 5px grey;
+}
 #myBar {
   position: relative;
   width: 272px;
@@ -699,6 +712,10 @@ footer{
 #myBar {
   width: 322px;
 }
+/*Hazte_pro*/
+.cuadro{
+	width: 325px;
+}
 }
 /*Para PCs*/
 @media only screen and (min-width: 768px) {
@@ -776,5 +793,10 @@ footer{
 }
 #myBar {
   width: 340px;
+}
+/*Hazte_pro*/
+.cuadro{
+	width: 335px;
+	margin: 15px 0 0 60px;
 }
 }
