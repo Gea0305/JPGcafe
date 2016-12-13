@@ -65,22 +65,22 @@
 		<span>Nombre de usuario: </span><span id="Nombre_usuario">Username</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="text" placeholder="Escribe tu nuevo nombre de usuario">
+		<input class="entrada" id="usuario_cambiar" type="text" placeholder="Escribe tu nuevo nombre de usuario">
 	</div>
 	<div class="line">
 		<span>Correo: </span><span id="Correo">usermail@gmail.com</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="text" placeholder="Escribe tu nueva dirección de correo">
+		<input class="entrada" id="Correo_cambiar" type="text" placeholder="Escribe tu nueva dirección de correo">
 	</div>
 	<div class="line">
-		<span>Cambiar contraseña (requiere las dos)</span>
+		<span id="Contrasenia">Cambiar contraseña (requiere las dos)</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="password" placeholder="Escribe tu antigua contraseña">
+		<input class="entrada" id="pass1" type="password" placeholder="Escribe tu antigua contraseña">
 	</div>
 	<div class="line2">
-		<input class="entrada" type="password" placeholder="Escribe la nueva contraseña">
+		<input class="entrada" id="pass2" type="password" placeholder="Escribe la nueva contraseña">
 	</div>
 	<div class="line">
 		<span>Espacio utilizado: 20/500GB</span>
@@ -94,31 +94,31 @@
 		<span>Nombre: </span><span id="Nombre">(no establecido)</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="text" placeholder="Escribe tu nombre">
+		<input class="entrada" id="Nombre_cambiar" type="text" placeholder="Escribe tu nombre">
 	</div>
 	<div class="line">
 		<span>Apellido: </span><span id="Apellido">(no establecido)</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="text" placeholder="Escribe tu apellido">
+		<input class="entrada" id="Apellido_cambiar" type="text" placeholder="Escribe tu apellido">
 	</div>
 	<div class="line">
 		<span>Facebook asociado: </span><span id="Facebook">(no establecido)</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="text" placeholder="Escribe tu cuenta de Facebook">
+		<input class="entrada" id="Facebook_cambiar" type="text" placeholder="Escribe tu cuenta de Facebook">
 	</div>
 	<div class="line">
 		<span>Twitter asociado: </span><span id="Twitter">(no establecido)</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="text" placeholder="Escribe tu cuenta de Twitter">
+		<input class="entrada" id="Twitter_cambiar" type="text" placeholder="Escribe tu cuenta de Twitter">
 	</div>
 	<div class="line">
-		<span>Google+ asociado: </span><span id="G_plus">(no establecido)</span>
+		<span>Google+ asociado: </span><span id="Gplus">(no establecido)</span>
 	</div>
 	<div class="line2">
-		<input class="entrada" type="text" placeholder="Escribe tu cuenta de Google+">
+		<input class="entrada" id="Gplus_cambiar"type="text" placeholder="Escribe tu cuenta de Google+">
 	</div>
 	<div class="line">
 		<span>Imagen de perfil: </span><span id="Imagen_perfil">(no establecida)</span>
@@ -136,7 +136,7 @@
 		<span>Edad: </span><span id="Edad">(no establecida)</span>
 	</div>
 	<div class="line2">
-		<input class="entrada numero" type="number" placeholder="Edad">
+		<input class="entrada numero" id="Edad_cambiar" type="number" placeholder="Edad">
 	</div>
 	<div class="line">
 		<span>Tipo de usuario: </span><span id="Plan">normal</span>
@@ -189,22 +189,39 @@
 <script>
 
 function setCookie() {
-   	var username = document.getElementById("nom1");//selecciona el nombre
-if (username==""){username=//el nombre de usuario de arriba}
-else{document.cookie = username + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';//para borrar una cookie}
-	var pass1 = document.getElementById("pas");//y la contraseña
-	var pass2= document.getElementById("pas");//la nueva contraseña
-if(pass1!=""){//comprobar que es correcta y cambiar)}
-else{buscar en cookie la contraseña}
-	var correo = document.getElementById("nom1");//selecciona el nombre
-if (correo==""){correo=//el correo de arriba}
-	var name = document.getElementById("pas");//y la comtraseña
-	var surname= document.getElementById("pas");//la nueva contraseña
-	var facebook = document.getElementById("nom1");//selecciona el nombre
-	var twitter = document.getElementById("pas");//y la comtraseña
-	var gmail= document.getElementById("pas");//la nueva contraseña
-	var age= document.getElementById("pas");//la nueva contraseña
-	var pro= document.getElementById("pas");//la nueva contraseña
+   	var username = document.getElementById("usuario_cambiar");
+if (username==""){username=document.getElementById("Nombre_usuario");}
+else{
+var usuarioeliminado= username=document.getElementById("Nombre_usuario");
+document.cookie = usuarioeliminado + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';//para borrar una cookie
+}
+	var Contrasenia = document.getElementById("Contrasenia");
+	var pass1 = document.getElementById("pass1");
+if(pass1!="" && pass1==Contrasenia){
+var pass2 = document.getElementById("pass2");
+}else{
+alert("contraseña incorrecta");
+return false
+}
+	var correo = document.getElementById("Correo_cambiar");
+if (correo==""){correo=document.getElementById("Correo");}
+	var name = document.getElementById("Nombre_cambiar");
+if(name="")){name=document.getElementById("Nombre");}
+	var surname= document.getElementById("Apellido_cambiar");
+	if(surname="")){surname=document.getElementById("Apellido");}
+	var facebook = document.getElementById("Facebook_cambiar");
+	if(facebook="")){facebook=document.getElementById("Facebook");}
+	var twitter = document.getElementById("Twitter_cambiar");
+	if(twitter="")){twitter=document.getElementById("Twitter");}
+	var gplus= document.getElementById("Gplus_cambiar");
+	if(gplus="")){gplus=document.getElementById("Gplus");}
+	var age= document.getElementById("Edad_cambiar");
+	if(age="")){age=document.getElementById("Edad");}
+	
+	
+	var pro= document.getElementById("Pro");
+	if(pro="pro")){name=document.getElementById("Nombre");}
+	
 //orden de la cookie: username=pass.correo.name.surname.facebook.twitter.gmail.age.pro.
 
     document.cookie = username.value + "=" + pass.value + "." + correo.value + "." + name.value + "." + surname.value + "." + facebook.value + "." + twitter.value + "." + gmail.value + "." + age.value + "." + pro.value + "."; //lo junta y lo guarda en una cookie
@@ -213,8 +230,6 @@ if (correo==""){correo=//el correo de arriba}
 var eleForm = document.getElementById("form");
 eleForm.addEventListener("submit", function(){
     var username = document.getElementById("nom1");
-	var userpass = document.getElementById("pas");
-	var juntar= username + "=" + userpass;//juntamos para comparar
 	var buscacookie = document.cookie;//buscamos al usuario en las cookies
     var encuentracookie = buscacookie.indexOf(" " + username + "=") +1;
 	if (encuentracookie == 0)//si no lo encuentra, tal vez sea el primer usuario
@@ -229,38 +244,65 @@ eleForm.addEventListener("submit", function(){
    fin= buscacookie.length;
    }//a continuacion meto en variables la informacion de la cookie
    var equal= buscacookie.indexOf("=",encuentracookie);
-   if (userpass==unescape(buscacookie.substring(equal,fin))
+   if (userpass==unescape(buscacookie.substring(equal,fin)))//solucionar el problema inicial
 	var index=0;
 	var previndex=0;
 	var juntar2 = unescape(buscacookie.substring(encuentracookie,fin));
+	equal=juntar2.indexOf("=",0);
+	
+	var username1= unescape(juntar2.substring(0,equa));
+	var sustituir = document.getElementById("Nombre_usuario");
+	sustituir.innerHTML= username1;
 	index= juntar2.indexOf(".", index);
-	var username= unescape(equal.substring(0,index));
+	
+	var pass1 = unescape(juntar2.substring(equal,index));
+	 sustituir = document.getElementById("Contrasenia");
+	sustituir.innerHTML= pass1;
 	previndex=index;
 	index= juntar2.indexOf(".", index);
-	var pass1 = unescape(equal.substring(previndex,index));
-	previndex=index;
-	index= juntar2.indexOf(".", index);
+	
 	var correo = unescape(equal.substring(previndex,index));
+	 sustituir = document.getElementById("Correo");
+	sustituir.innerHTML= correo;
 	previndex=index;
 	index= juntar2.indexOf(".", index);
+	
 	var name = unescape(equal.substring(previndex,index));
+	 nombre_sustituir = document.getElementById("Nombre");
+	nombre_sustituir.innerHTML= name;
 	previndex=index;
 	index= juntar2.indexOf(".", index);
+	
 	var surname= unescape(equal.substring(previndex,index));
+	 sustituir = document.getElementById("Apellido");
+	sustituir.innerHTML= surname;
 	previndex=index;
 	index= juntar2.indexOf(".", index);	
+	
 	var facebook = unescape(equal.substring(previndex,index));
+	 sustituir = document.getElementById("Facebook");
+	sustituir.innerHTML= facebook;
 	previndex=index;
 	index= juntar2.indexOf(".", index);	
+	
 	var twitter = unescape(equal.substring(previndex,index));
+	 sustituir = document.getElementById("Twitter");
+	sustituir.innerHTML= twitter;
 	previndex=index;
 	index= juntar2.indexOf(".", index);	
+	
 	var gmail= unescape(equal.substring(previndex,index));
+	 sustituir = document.getElementById("Gplus");
+	sustituir.innerHTML= gmail;
 	previndex=index;
 	index= juntar2.indexOf(".", index);
+	
 	var age= unescape(equal.substring(previndex,index));
+	 sustituir = document.getElementById("age");
+	sustituir.innerHTML= age;
 	previndex=index;
 	index= juntar2.indexOf(".", index);	
+	
 	var pro= unescape(equal.substring(previndex,index));
 	return false;
  });  
